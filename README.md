@@ -22,6 +22,16 @@ You'll want to run fairApp in the background ./fairApp& which should just pop up
 
 ![image](https://github.com/New101Leaf/Amusement-Park-Sim/assets/104871189/da10644f-b3f3-4dc7-ae0e-1f568c1773f5)
 
+What do the colors mean?
+
+Red: Waiting in line
+
+Tan: Boarding the ride
+
+Green: Guests are riding
+
+Blue: Getting off the ride
+
 Now that the server thread and ride threads are booted up, it is now ready to accept guest threads.
 
 guest: takes the format ./guest <ticket> <wait time> <ride number>]
