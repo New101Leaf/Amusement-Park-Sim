@@ -4,7 +4,7 @@
 
 To start off you want to make sure you have the X Windows Systems before you can run the make file.
 
-To install the X11 on debian-based systems use: sudo apt-get install libx11-dev for all else, I'm not sure but you can search online or ask Chat.
+To install the X11 on debian-based systems use: sudo apt-get install libx11-dev
 
 Once the X11 is installed you can run 'make'
 
