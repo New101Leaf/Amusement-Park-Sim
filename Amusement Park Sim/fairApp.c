@@ -101,5 +101,5 @@ int main() {
 	// Kill all the guest processes for any guests remaining
 	pthread_cancel(display_thread);
 	pthread_join(display_thread, NULL);
-  printf("FAIR APP: ended successfully\n");
+        printf("FAIR APP: ended successfully\n");
 }
