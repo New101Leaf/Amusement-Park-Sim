@@ -34,10 +34,10 @@ void main(int argc, char *argv[]) {
 	
 	
 	
-    // Guest tickets 5-40
+        // Guest tickets 5-40
 	// wait time 600 - 1200
 	// the ride 0-9
-     int guestTickets;
+         int guestTickets;
 	 int waitTime;
 	 unsigned char desiredRide;
 	 unsigned int guestID = getpid();
@@ -75,7 +75,7 @@ void main(int argc, char *argv[]) {
 	unsigned int response[4];
 
 
-    // Create socket
+        // Create socket
 	clientSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 	if (clientSocket < 0) {
 		printf("*** CLIENT ERROR: Could open socket.\n");
@@ -134,16 +134,15 @@ void main(int argc, char *argv[]) {
 
 		
 		while (1) {
-				// Make sure that the guest has enough tickets for the desired ride
-				// otherwise chose a different ride
-				//if does not have tickets for desired ride break out of loop 
+				// Make sure has enough tickets for the desired ride
+				// Otherwise chose a different ride
 				if (guestTickets < ticketsRequired[desiredRide]){
 					//printf("Guest has less tickets than required ride tickets \n");
 					break;
 					
 				}
 
-			//	printf("Sending get wait est %d \n", guestID);
+		
 				buffer[0] = GET_WAIT_ESTIMATE;
 				buffer[1] = desiredRide;
 				send(clientSocket,buffer,sizeof(buffer),0);
@@ -217,7 +216,7 @@ void main(int argc, char *argv[]) {
 	
 	printf("Guest leaving \n");
 	//Killing the guest process if guest does not get admitted or runs out of tickets
-   int result = kill (guestID, SIGTERM);
+        int result = kill (guestID, SIGTERM);
 	
 	
 
