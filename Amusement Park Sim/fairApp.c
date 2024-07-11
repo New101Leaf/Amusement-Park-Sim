@@ -73,7 +73,7 @@ int main() {
 	pthread_t display_thread;
 	pthread_create(&display_thread, NULL, showSimulation, &ottawaFair);
 
-    // Wait for the incoming requests thread to complete, from a STOP command
+        // Wait for the incoming requests thread to complete, from a STOP command
 	pthread_join(guest_thread, NULL);
 
 	
