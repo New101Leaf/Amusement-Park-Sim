@@ -66,7 +66,7 @@ int main() {
 
 
 	pthread_t guest_thread;
-    pthread_create(&guest_thread, NULL, handleIncomingRequests, &ottawaFair);
+        pthread_create(&guest_thread, NULL, handleIncomingRequests, &ottawaFair);
 
     
   	// Spawn a thread to handle display
