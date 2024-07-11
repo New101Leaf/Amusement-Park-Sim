@@ -19,13 +19,13 @@ void main() {
   char buffer[50];
 
   for (int i=0; i<2; i++) {
-	printf(" \n NEW GUEST CREATED %d \n", i);
-    guestTickets = rand()%36 + 5;
-    guestWait = rand()%301 + 600;
-    priorityRide = rand()%NUM_RIDES;
-    sprintf(buffer, "./guest %d %d %d&", guestTickets, guestWait, priorityRide);
-   // printf("%s", buffer);
-    system(buffer);
+	  
+     printf(" \n NEW GUEST CREATED %d \n", i);
+     guestTickets = rand()%36 + 5;
+     guestWait = rand()%301 + 600;
+     priorityRide = rand()%NUM_RIDES;
+     sprintf(buffer, "./guest %d %d %d&", guestTickets, guestWait, priorityRide);
+     system(buffer);
 
     usleep(10000); // Keep this 1/100 second delay between guest creation
   }
