@@ -119,7 +119,7 @@ void *handleIncomingRequests(void *x) {
 		
 				recv(clientSocket, buffer, sizeof(buffer), 0); //get id from here
 				printf("SERVER: Received client request \n");
-			//	printf("Buffer is %d \n", buffer[0]);
+			
 
 				//Admitting guest
 				
@@ -135,7 +135,7 @@ void *handleIncomingRequests(void *x) {
 					
 						send(clientSocket, response, sizeof(response), 0);
 						//Add guest id to the fair array
-					//	sem_wait(&serverBusyIndicator);
+					
 						f ->guestIDs[f->numGuests] = buffer[1];
 
 						//Send the list of rides and the tickets required
@@ -197,7 +197,7 @@ void *handleIncomingRequests(void *x) {
 					//Find the id of the guest and remove it from the array
 					int found =0;
 					int i,j;
-                    //Find the position to remove
+                    			//Find the position to remove
 					for (i =0; i< f ->numGuests; i++){
 						if (f -> guestIDs[i] == buffer[1]){
 							found =1;
